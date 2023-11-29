@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="{% static 'myapp/css/style-settingscreen.css' %}">
+    <script src="{% static 'myapp/js/settings.js' %}"></script>
+</head>
+
+<body>
+    <a  href="{% url 'index' %}">
+        <button type="button" id="back">Back</button>
+    </a>
+    <div class="settings-container">
+        {% csrf_token %}
+        <h1>Settings</h1>
+        <p>Network: howest.guests</p>
+        <p>IP Address: 192.168.120.11</p>
+        <a  href="{% url 'wifi' %}">
+        <button type="button">Connect to other Wi-Fi network</button>
+        </a>
+        <a href="{% url 'uuid' %}">
+            <button type="button">Check UUID</button>
+        </a>
+        <button id="reboot" type="button">Reboot</button>
+    </div>
+</body>
+</html>

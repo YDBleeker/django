@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wi-Fi Connection</title>
+    <link rel="stylesheet" href="{% static 'myapp/css/style-wifiscreen.css' %}">
+    <script src="{% static 'myapp/js/wifi.js' %}"></script>
+</head>
+<body>
+    <a href="{% url 'setting' %}">
+        <button type="button" id="back">Back</button>
+    </a>
+      <div class="wifi-container">
+        <h1>Wi-Fi Connection</h1>
+
+        <form id="wifi-form">
+            {% csrf_token %}
+            <label for="network-select">Network:</label>
+            <select id="network-select" required>
+                <option value="" disabled selected>Select a Wi-Fi network</option>
+                <!-- Dynamically populate options using JavaScript -->
+            </select>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="button">Connect</button>
+        </form>
+    </div>
+</body>
+</html>

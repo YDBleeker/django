@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'PlantFontt';
+    src: url('../font/JustMeAgainDownHere-Regular.ttf') format('truetype');
+    /* Other formats like woff, woff2, ttf can be added for cross-browser compatibility */
+}
+
+/* Resetting default margin and padding for the body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e1f0e1; /* Very light green color */
+    font-family: 'PlantFontt', sans-serif; /* Use your font name here */
+}
+
+/* Style for the container of the application */
+.app-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+
+/* Style for the centered image */
+.centered-image {
+    max-width: 80%; /* Adjust the size of the image as needed */
+    max-height: 80vh; /* Adjust the size of the image as needed */
+    display: block;
+}
+
+/* Style for the settings icon */
+.settings-icon {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    width: 30px; /* Adjust the size of the icon as needed */
+    height: 30px; /* Adjust the size of the icon as needed */
+    background-image: url('../img/settings-icon.png'); /* Replace 'settings-icon.png' with your icon */
+    background-size: cover;
+    cursor: pointer;
+}
